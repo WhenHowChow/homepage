@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>drawHW</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="name">
+            <h3> <strong>D</strong>aiki<strong>R</strong>oth<strong>A</strong>bhijit<strong>W</strong>enhao HomeWork.com</h3>
+            <hr size="3" style="border-color:#cf1717" >
+        </div>
+        <br>
+        
+        <div class=homeimage>
+            <img src="pic/drawHW.png" alt="drawLogo">
+        </div>
+        
+        <button id="signin">SIGN IN</button> 
+        <br><br>
+        <button id="signup">SIGN UP</button>
+        <div id="footer">
+            Copyright &copy; drawHW 2020
+        </div> 
+    </div>
+    
+    <div class="popSignIn">
+        <div id="container">
+
+            <div class="close">+</div>
+            <div id="logo" class="logoClass">
+                <img src="pic/drawHW.png" >
+            </div >
+            <hr style="margin-top: auto; padding-top: auto;">
+
+            <div id="loginbox">
+                <h2 style="margin-top:0;">SIGN IN</h2>
+                <form name="login" onsubmit="return run();">
+                    
+                    
+                    <input type="radio" name="account" value="student" id="student" checked> 
+                    <label for="student">Student</label>
+                    
+                    
+                    <input type="radio" name="account" value="faculty" id="faculty">
+                    <label for="faculty">Faculty</label> 
+                    
+                    <br><br>
+                    
+                    <p class="table">
+                    <label for="username">USERNAME </label><br>
+                    <input class="inputBox" type="text" id="username" name="username" placeholder="Username" required> 
+                    </p>
+                    <p class="table">
+                    <label for="password">PASSWORD </label> <br>
+                    <input class="inputBox" type="password" name="password" id="password" placeholder="Password" required>
+                    <br></p>
+
+                    <input type="submit" name="submit" id="submit" value="Sign In""> <br><br>
+                </form>
+
+                <button id="reset">Reset Password</button>  
+            </div>
+        </div> 
+    </div>
+
+    <div class="popForget">
+        <div id="container">
+
+            <div class="closeForget">+</div>
+            <div id="logo" class="logoClass">
+                <img src="pic/drawHW.png" >
+            </div >
+    
+            <hr style="margin-top: 0; padding-top: 0;">
+
+            <div id="loginbox">
+                <h2 style="margin-top:0;">RESET PASSWORD</h2>
+                <form name="forget" onsubmit="">
+                    
+                    
+                    <input type="radio" name="accountF" value="student" id="studentF" checked> 
+                    <label for="studentF">Student</label>
+                    
+                    <input type="radio" name="accountF" value="faculty" id="facultyF">
+                    <label for="facultyF">Faculty</label> 
+                    
+                    <br><br>
+                    
+                    <p class="table">
+                    <label for="usernameF">USERNAME </label><br>
+                    <input class="inputBox" type="text" id="usernameF" name="usernameF" placeholder="Username" required> 
+                    </p>
+                    <p class="table">
+                    <label for="emailF">EMAIL </label> <br>
+                    <input class="inputBox" type="email" name="emailF" id="emailF" placeholder="EMAIL" required>
+                    <br></p>
+
+                    <input type="submit" name="submitF" id="submitF" value="SUBMIT""> <br><br><br>
+                </form>
+
+                <p>After submit you will recieve an email from us.</p>
+             
+            </div>
+        </div> 
+    </div>
+
+    <div class="popSignUp">
+        <div id="container">
+
+            <div class="closeSU">+</div>
+            
+                <div id="logo" class="logoClass">
+                    <img src="pic/drawHW.png" >
+                </div >
+                <hr style="margin-top: auto; padding-top: auto;">
+                
+                
+            <div id="loginbox">
+                <h2 style="margin-top: auto; color:black;">SIGN UP</h2>
+                <form name="login" onsubmit="">
+                
+                    
+                    <input type="radio" name="accountSU" value="studentSU" id="studentSU" checked> 
+                    <label for="studentSU">Student</label>
+      
+                    
+                    <input type="radio" name="accountSU" value="facultySU" id="facultySU">
+                    <label for="facultySU">Faculty</label> 
+                    
+                    <br>
+                    
+                    <p>
+                        <label for="emailSU">EMAIL</label> 
+                        <input class="inputBox" type="email" id="emailSU" name="emailSU" placeholder="email address" required> 
+                    </p>
+                    <p>
+                        <label for="usernameSU">USERNAME</label> 
+                        <input class="inputBox" type="text" id="usernameSU" name="usernameSU" placeholder="Username" required> 
+                    </p>
+                    <p>
+                        <label for="passwordSU">PASSWORD</label> 
+                        <input class="inputBox" type="password" name="passwordSU" id="passwordSU" placeholder="Password" required>
+                    </p>
+                    <p>
+                        <label for="cPasswordSU">CONFIRM PASSWORD</label> 
+                        <input class="inputBox" type="password" name="cPasswordSU" id="cPasswordSU" placeholder="Confirm Password" required>
+                    </p>
+    
+                    <input type="submit" name="submit" id="submit" value="SUBMIT"> 
+                    
+                </form>
+
+                <p>Thank you for sign-up with us.</p>
+             
+            </div>
+        </div> 
+    </div>
+    
+    <div class="Clock"> 
+        <script>
+            function startTime() {
+                var today = new Date();
+                var year = today.getFullYear();
+                var month = today.getMonth();
+                var date = today.getDate();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML = year + "-" + month + "-" + date + "  " + h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+                }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+                }  
+        </script>
+        <body onload="startTime()">
+            <div id="txt"></div>
+        </body>
+    </div>
+    
+    <script src="functions.js"></script>
+    
+</body>
+</html>
